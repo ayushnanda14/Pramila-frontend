@@ -1,0 +1,141 @@
+.nav{
+  opacity:0.75;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 500px 3fr 2.5fr 2.5fr 1fr;
+  z-index: 1;
+  /* align-items: center; */
+}
+.banner{
+  grid-row: 1/2;
+  border-bottom: 1px solid black;
+  display: grid;
+  place-items: center;
+  object-fit:fill;
+
+}
+
+.welcome{
+  font-size: 48px;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+.img_banner div img{
+  /* -webkit-filter: blur(8px); */
+  /* filter: blur(8px); */
+}
+.genres{
+  display: grid;
+  background-color: white;
+  z-index:1;
+}
+
+.book_list1{
+  grid-row: 3/4;
+  grid-column: 1/2;
+  display: grid;
+
+}
+
+.book_list2{
+  grid-row: 4/5;
+  grid-column: 1/2;
+  display: grid;
+}
+
+.genres h2, .book_list1 h2, .book_list2 h2{
+  grid-column: 1/2;
+  margin-left: 3em;
+  margin-bottom: 0;
+
+}
+
+
+.scroll_books{
+  overflow-x: scroll;
+  place-items: center;
+  scroll-behavior: smooth;
+  /* color: white; */
+  /* background: purple; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;   
+}
+.ul{
+  position: relative;
+  list-style-type: none;
+  display: inline-flex;
+}
+.scroll_books::-webkit-scrollbar{
+  display: none;
+}
+.ul li{
+  margin-left: 20px;
+}
+
+.genre_card{
+  height: 300px;
+  width: 300px;
+  display: grid;
+  place-items: center;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  transition: all 0.2s ease;
+  margin-right: 10px;
+}
+
+.genre_card:hover,
+.genre_card:focus,
+.genre_card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+  transform: scale(1.05);
+}
+.img_banner{
+  z-index: 0;
+  height: 100%;
+  /* position: relative; */
+}
+.section_title{
+  display: grid;
+  grid-template-columns: 2fr 10fr 2fr;
+  place-items: center;
+}
+
+.prevNext_wrapper{
+  grid-column: 3/4;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.prev{
+  grid-column: 1/2;
+  display: grid;
+  place-items: center;
+  height: 30px;
+  width: 40px;
+}
+.next{
+  grid-column: 2/3;
+  display: grid;
+  place-items: center;
+  height: 30px;
+  width: 40px;
+}
+.prev, .next{
+  transform: scale(0.2);
+  margin-top: 0.25em;
+  /* border: 1px solid black; */
+  /* padding-bottom: 1em; */
+}
+.prev:hover,.prev:focus,.prev:active, .next:hover,.next:focus,.next:active{
+  transform: scale(0.25);
+}
+
+.arrow{height: 30vmin;
+
+}
